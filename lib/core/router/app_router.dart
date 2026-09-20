@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/profile/presentation/screens/profile_screen.dart';
 import '../../features/admin/presentation/widgets/admin_shell.dart';
 import '../../features/auth/presentation/controllers/auth_controller.dart';
 import '../../features/auth/presentation/screens/login_screen.dart';
@@ -85,7 +86,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: AppRoutes.profile,
-        builder: (_, _) => const _StubScreen('Profile'),
+        builder: (_, _) => const UserProfileScreen(),
       ),
       GoRoute(path: AppRoutes.admin, builder: (_, _) => const AdminShell()),
     ],
